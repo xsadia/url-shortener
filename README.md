@@ -1,6 +1,24 @@
 ### How to run
 - fill .env file following .env.example
 - run `yarn` to install dependencies and `yarn dev` to start development server
+
+### API deployed at
+
+https://shawtie1.herokuapp.com
+
+### Routes
+```
+GET /url/:hash - redirects to original URL based on a hash
+```
+```
+POST /url - generates a hash
+request body = {
+	"url": original URL,
+	"alias": optional custom value to be used in place of random hash,
+        "expiresAt": optional date to expire shortened URL formatted YYYY-mm-dd HH:mm:ss
+}
+```
+
 ### Problems with this implementation
 - the counter is hard coded and will reset with every deploy
 - possible but not so likely collision
